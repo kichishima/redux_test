@@ -1,3 +1,25 @@
+# 手順
+- 所定のライブラリをインストールする
+    - "@reduxjs/toolkit": "^1.6.1"
+    - "react-redux": "^7.2.4",
+    - "redux-devtools-extension": "^2.13.9" 開発用
+    - "redux-devtools": "^3.7.0"
+- store.js : 
+    - state初期値
+    - reducer（どんな処理をするか）
+    - createStore
+    - initializeStore(新しいstoreを作成? たぶん)
+- _app.js : useStore, Provider (store.jsを呼び出して、新しいstoreを受け取る)
+- 新しいコンポーネントに反映される
+
+# memo
+- stateの呼び出し方  
+`const count = useSelector((state) => state.count)`
+- dispatch  
+``` const dispatch = useDispatch()
+    const increment = () => dispatch({ type: 'INCREMENT', }) ```  
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -7,7 +29,7 @@ First, run the development server:
 ```bash
 npm run dev
 # or
-yarn dev
+yarn dev    
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

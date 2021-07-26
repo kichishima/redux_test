@@ -1,7 +1,9 @@
 import { useSelector, useDispatch } from 'react-redux'
 
 const useCounter = () => {
+    // stateの呼び出し方
   const count = useSelector((state) => state.count)
+    // dispatch
   const dispatch = useDispatch()
   const increment = () =>
     dispatch({
@@ -31,6 +33,5 @@ const Counter = () => {
     </div>
   )
 }
-
 
 export default Counter
