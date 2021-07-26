@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import Link from 'next/link'
+import Counter from './components/counter'
 
 export default function Page1(){
     const [piyo, setpiyo] = useState("this is page1")
@@ -8,6 +9,7 @@ export default function Page1(){
             <p>{piyo}</p>
             <Link href="/Page">default</Link>
             <Link href="/Page2">Page2</Link>
+            <Counter/>
         </div>
     )
 }

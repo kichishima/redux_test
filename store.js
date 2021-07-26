@@ -1,3 +1,5 @@
+// preloadedState がどこから渡された値なのか謎（予約語？）
+
 import { useMemo } from 'react'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
@@ -60,6 +62,8 @@ export const initializeStore = (preloadedState) => {
     // Reset the current store
     store = undefined
   }
+
+　//　ここら辺で何をどうしてるのかよくわからず   
 
   // For SSG and SSR always create a new store
   if (typeof window === 'undefined') return _store

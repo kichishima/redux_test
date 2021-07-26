@@ -7,6 +7,7 @@ import Counter from './components/counter'
 
 export default function Page(){
     const dispatch = useDispatch()
+
       // Tick the time every second
     // useInterval(() => {
     // dispatch({
@@ -18,6 +19,7 @@ export default function Page(){
 
 
     const [hoge, setHoge] = useState("this is default")
+
     return (
         <div>
             <p>{hoge}</p>
