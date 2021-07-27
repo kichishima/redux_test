@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux'
 import {useState} from 'react'
 import Link from 'next/link'
 import Counter from './components/counter'
+import ChildOne from './components/childOne'
 
 export default function Page(){
     const dispatch = useDispatch()
@@ -26,6 +27,7 @@ export default function Page(){
             <Link href="/Page1">Page1</Link>
             <Link href="/Page2">Page2</Link>
             <Counter/>
+            <ChildOne/>
         </div>
     )
 
