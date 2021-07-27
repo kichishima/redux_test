@@ -16,8 +16,19 @@
 - stateの呼び出し方  
 `const count = useSelector((state) => state.count)`
 - dispatch  
-``` const dispatch = useDispatch()
-    const increment = () => dispatch({ type: 'INCREMENT', }) ```  
+
+```
+const dispatch = useDispatch()  
+const increment = () =>  
+dispatch({ type: 'INCREMENT', })  
+```
+
+__できること__  
+- ページ遷移を跨いだstate値の保持
+- 遷移前後のどの階層のコンポーネントでも変更・参照可能
+- 違う（出力用の）コンポーネントから同一stateにアクセス可能
+__できないこと__
+- リロード後のstate値の保持（*リロードすると消滅する）
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
