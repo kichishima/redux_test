@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 
+// 機能部分
 const useCounter = () => {
     // stateの呼び出し方
   const count = useSelector((state) => state.count)
@@ -20,6 +21,7 @@ const useCounter = () => {
   return { count, increment, decrement, reset }
 }
 
+// JSX部分
 const Counter = () => {
   const { count, increment, decrement, reset } = useCounter()
   return (
