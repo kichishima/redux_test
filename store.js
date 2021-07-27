@@ -35,6 +35,16 @@ const reducer = (state = initialState, action) => {
         ...state,
         count: initialState.count,
       }
+    case 'DOUBLE':
+      return {
+        ...state,
+        count: state.count * 2,
+      }
+    case 'HALFREMAIN':
+      return {
+        ...state,
+        count: state.count % 2,
+      }     
     default:
       return state
   }
